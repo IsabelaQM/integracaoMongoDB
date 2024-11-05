@@ -63,7 +63,7 @@ public class UserService {
     }
 
     public ResponseEntity<?> delete(ObjectId id){
-        if(id!=null)
+        if(id==null)
             return ResponseEntity.badRequest().build();
         repository.deleteById(id);
 
